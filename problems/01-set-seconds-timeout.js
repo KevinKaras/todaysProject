@@ -1,11 +1,14 @@
 /***********************************************************************
-Recall that the built-in `setTimeout` function accepts a delay in
-milliseconds. It would be cool if we had a version that could accept the
+1. Recall that the built-in `setTimeout` function accepts a delay in
+milliseconds. 
+2. It would be cool if we had a version that could accept the
 delay in seconds!
 
-Write a function `setSecondsTimeout` that accepts a callback and a delay
-in *seconds*. The function should set a timeout on the given callback for
-the specified amount of time. Feel free to use the built-in `setTimeout`
+1. Write a function `setSecondsTimeout` that accepts a callback and a delay
+in *seconds*. 
+2. The function should set a timeout on the given callback for
+the specified amount of time. 
+3. Feel free to use the built-in `setTimeout`
 in your implementation.
 
 In addition to Mocha, we recommend that you test your code manually using 
@@ -22,9 +25,18 @@ setSecondsTimeout(function () {
     console.log('world');
 }, 1.4); // should print 'world' after 1400 milliseconds
 ***********************************************************************/
- console.log ("hey maria")
+function setSecondsTimeout(cb, delay){
+  return setTimeout(cb , delay * 1000)
 
+}
 
+console.log(setSecondsTimeout(function () {
+  console.log('hello');
+}, 1)); // should print 'hello' after 1000 milliseconds
+
+// setSecondsTimeout(function () {
+//   console.log('world');
+// }, 1.4); // should print 'world' after 1400 milliseconds
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 try {
   module.exports = setSecondsTimeout;
